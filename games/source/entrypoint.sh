@@ -30,23 +30,28 @@ TZ=${TZ:-UTC}
 export TZ
 
 # Set environment variable that holds the Internal Docker IP
-INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
+INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
 export INTERNAL_IP
+
+# Default the IMAGE_PROMPT environment variable to something nice
+IMAGE_PROMPT=${IMAGE_PROMPT:-$'\033[1m\033[33mcontainer@pterodactyl~ \033[0m'}
+export IMAGE_PROMPT
 
 # Switch to the container's working directory
 cd /home/container || exit 1
 
-
 ## just in case someone removed the defaults.
 if [ "${STEAM_USER}" == "" ]; then
-    echo -e "steam user is not set.\n"
-    echo -e "Using anonymous user.\n"
+#    echo -e "steam user is not set.\n"
+#    echo -e "Using anonymous user.\n"
     STEAM_USER=anonymous
     STEAM_PASS=""
     STEAM_AUTH=""
 else
-    echo -e "user set to ${STEAM_USER}"
+#    echo -e "user set to ${STEAM_USER}"
 fi
+
+
 
 ## if auto_update is not set or to 1 update
 if [ -z ${AUTO_UPDATE} ] || [ "${AUTO_UPDATE}" == "1" ]; then 
@@ -65,9 +70,10 @@ else
     echo -e "Not updating game server as auto update was set to 0. Starting Server"
 fi
 
-# Replace Startup Variables
-MODIFIED_STARTUP=$(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
-echo -e ":/home/container$ ${MODIFIED_STARTUP}"
+# Replace variables in the startup command
+PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
+printf "%s%s\n" "$IMAGE_PROMPT" "$PARSED"
 
-# Run the Server
-exec ${MODIFIED_STARTUP}
+# Run the startup command
+# shellcheck disable=SC2086
+exec env ${PARSED}
