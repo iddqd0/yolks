@@ -42,16 +42,10 @@ cd /home/container || exit 1
 
 ## just in case someone removed the defaults.
 if [ "${STEAM_USER}" == "" ]; then
-#    echo -e "steam user is not set.\n"
-#    echo -e "Using anonymous user.\n"
     STEAM_USER=anonymous
     STEAM_PASS=""
     STEAM_AUTH=""
-else
-#    echo -e "user set to ${STEAM_USER}"
 fi
-
-
 
 ## if auto_update is not set or to 1 update
 if [ -z ${AUTO_UPDATE} ] || [ "${AUTO_UPDATE}" == "1" ]; then 
@@ -65,14 +59,11 @@ if [ -z ${AUTO_UPDATE} ] || [ "${AUTO_UPDATE}" == "1" ]; then
     else
         echo -e "No appid set. Starting Server"
     fi
-
-else
-    echo -e "Not updating game server as auto update was set to 0. Starting Server"
 fi
 
 # Replace variables in the startup command
 PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
-printf "%s%s\n" "$IMAGE_PROMPT" "$PARSED"
+# printf "%s%s\n" "$IMAGE_PROMPT" "$PARSED"
 
 # Run the startup command
 # shellcheck disable=SC2086
