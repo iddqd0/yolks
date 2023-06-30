@@ -13,7 +13,7 @@ RUN         apt install -y alsa-tools libpulse0 pulseaudio libpulse-dev libasoun
 RUN         useradd -d /home/container -m container
 
 # Download Proton GE
-RUN         curl -sLOJ $(curl -s https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest | grep browser_download_url | cut -d\" -f4 | egrep .tar.gz)
+RUN         curl -sLOJ "$(curl -s https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest | grep browser_download_url | cut -d\" -f4 | egrep .tar.gz)"
 RUN         tar -xzf GE-Proton*.tar.gz -C /usr/local/bin/ --strip-components=1
 RUN         rm GE-Proton*.*
 
@@ -32,10 +32,10 @@ RUN	        wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Wi
 
 ## install rcon
 RUN         cd /tmp/ \
-            && curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v0.10.2/rcon-0.10.2-amd64_linux.tar.gz > rcon.tar.gz \
+            && curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v0.10.3/rcon-0.10.3-amd64_linux.tar.gz > rcon.tar.gz \
             && tar xvf rcon.tar.gz \
-            && mv rcon-0.10.2-amd64_linux/rcon /usr/local/bin/
-
+            && mv rcon-0.10.3-amd64_linux/rcon /usr/local/bin/
+            
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
