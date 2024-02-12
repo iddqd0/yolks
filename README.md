@@ -35,6 +35,11 @@ is tagged correctly.
 * [ubuntu](/oses/ubuntu)
   * `ghcr.io/parkervcp/yolks:ubuntu`
 
+### [Apps](/apps)
+
+* [`uptimekuma`](/apps/uptimekuma)
+  * `ghcr.io/parkervcp/yolks:apps_uptimekuma`
+
 ### [Bot](/bot)
 
 * [`bastion`](/bot/bastion)
@@ -50,6 +55,13 @@ is tagged correctly.
 
 * [`Box64`](/box64)
   * `ghcr.io/parkervcp/yolks:box64`
+
+### [Bun](/bun)
+
+* [`Bun Canary`](/bun/canary)
+  * `ghcr.io/parkervcp/yolks:bun_canary`
+* [`Bun Latest`](/bun/latest)
+  * `ghcr.io/parkervcp/yolks:bun_latest`
 
 ### [Cassandra](/cassandra)
 
@@ -75,6 +87,21 @@ is tagged correctly.
   * `ghcr.io/parkervcp/yolks:dotnet_6`
 * [`dotnet7.0`](/dotnet/7)
   * `ghcr.io/parkervcp/yolks:dotnet_7`
+* [`dotnet8.0`](/dotnet/8)
+  * `ghcr.io/parkervcp/yolks:dotnet_8`
+
+### [Elixir](/elixir)
+
+* [`elixir 1.12`](/elixir/1.12)
+  * `ghcr.io/parkervcp/yolks:elixir_1.12`
+* [`elixir 1.13`](/elixir/1.13)
+  * `ghcr.io/parkervcp/yolks:elixir_1.13`
+* [`elixir 1.14`](/elixir/1.14)
+  * `ghcr.io/parkervcp/yolks:elixir_1.14`
+* [`elixir 1.15`](/elixir/1.12)
+  * `ghcr.io/parkervcp/yolks:elixir_1.15`
+* [`elixir latest`](/elixir/latest)
+  * `ghcr.io/parkervcp/yolks:elixir_latest`
 
 ### [Erlang](/erlang)
 
@@ -93,8 +120,12 @@ is tagged correctly.
   * `ghcr.io/parkervcp/games:arma3`
 * [`dayz`](/games/dayz)
   * `ghcr.io/parkervcp/games:dayz`
+* [`minetest`](/games/minetest)
+  * `ghcr.io/parkervcp/games:minetest`  
 * [`mohaa`](games/mohaa)
   * `ghcr.io/pterodactyl/games:mohaa`  
+* [`Multi Theft Auto: San Andreas`](games/mta)
+  * `ghcr.io/pterodactyl/games:mta`    
 * [`samp`](/games/samp)
   * `ghcr.io/parkervcp/games:samp`  
 * [`source`](/games/source)
@@ -116,6 +147,12 @@ is tagged correctly.
   * `ghcr.io/parkervcp/yolks:go_1.18`
 * [`go1.19`](/go/1.19)
   * `ghcr.io/parkervcp/yolks:go_1.19`
+* [`go1.20`](/go/1.20)
+  * `ghcr.io/parkervcp/yolks:go_1.20`
+* [`go1.21`](/go/1.21)
+  * `ghcr.io/parkervcp/yolks:go_1.21`
+* [`go1.22`](/go/1.22)
+  * `ghcr.io/parkervcp/yolks:go_1.22`
 
 ### [Java](/java)
 
@@ -129,6 +166,8 @@ is tagged correctly.
   * `ghcr.io/parkervcp/yolks:java_17`
 * [`java19`](/java/19)
   * `ghcr.io/parkervcp/yolks:java_19`
+* [`java21`](/java/21)
+  * `ghcr.io/parkervcp/yolks:java_21`
 
 ### [MariaDB](/mariadb)
 
@@ -142,6 +181,8 @@ is tagged correctly.
     * `ghcr.io/parkervcp/yolks:mariadb_10.6`
   * [`MariaDB 10.7`](/mariadb/10.7)
     * `ghcr.io/parkervcp/yolks:mariadb_10.7`
+  * [`MariaDB 11.2`](/mariadb/11.2)
+    * `ghcr.io/parkervcp/yolks:mariadb_11.2`
 
 ### [MongoDB](/mongodb)
 
@@ -151,6 +192,8 @@ is tagged correctly.
     * `ghcr.io/parkervcp/yolks:mongodb_5`
  * [`MongoDB 6`](/mongodb/6)
     * `ghcr.io/parkervcp/yolks:mongodb_6`    
+ * [`MongoDB 7`](/mongodb/7)
+    * `ghcr.io/parkervcp/yolks:mongodb_7`
 
 ### [Mono](/mono)
 
@@ -173,6 +216,8 @@ is tagged correctly.
   * `ghcr.io/parkervcp/yolks:nodejs_19`
 * [`node20`](/nodejs/20)
   * `ghcr.io/parkervcp/yolks:nodejs_20`
+* [`node21`](/nodejs/21)
+  * `ghcr.io/parkervcp/yolks:nodejs_21`
 
 ### [PostgreSQL](/postgres)
 
@@ -201,6 +246,8 @@ is tagged correctly.
   * `ghcr.io/parkervcp/yolks:python_3.10`
 * [`python3.11`](/python/3.11)
   * `ghcr.io/parkervcp/yolks:python_3.11`
+* [`python3.12`](/python/3.12)
+  * `ghcr.io/parkervcp/yolks:python_3.12`
 
 ### [Redis](/redis)
 
@@ -213,8 +260,6 @@ is tagged correctly.
 
 ### [Rust](/rust)
 
-* ['rust1.31'](/rust/1.31)
-  * `ghcr.io/parkervcp/yolks:rust_1.31`
 * ['rust1.56'](/rust/1.56)
   * `ghcr.io/parkervcp/yolks:rust_1.56`
 * ['rust1.60'](/rust/1.60)
@@ -229,6 +274,8 @@ is tagged correctly.
   * `ghcr.io/parkervcp/steamcmd:dotnet`
 * [`SteamCMD Proton`](/steamcmd/proton)
   * `ghcr.io/parkervcp/steamcmd:proton`
+* [`SteamCMD Sniper latest`](/steamcmd/sniper)
+  * `ghcr.io/parkervcp/steamcmd:sniper`
 * [`SteamCMD Ubuntu latest LTS`](/steamcmd/ubuntu)
   * `ghcr.io/parkervcp/steamcmd:ubuntu`
 
@@ -242,6 +289,7 @@ is tagged correctly.
 
 * [`Wine`](/wine)
   * `ghcr.io/parkervcp/yolks:wine_latest`
+  * `ghcr.io/parkervcp/yolks:wine_devel`
   * `ghcr.io/parkervcp/yolks:wine_staging`
 
 ### [Installation Images](/installers)
